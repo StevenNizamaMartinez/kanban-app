@@ -19,7 +19,11 @@ export const login = async (req, res) => {
     res.cookie("token",serialized,{
       httpOnly: true,
       maxAge: 60 * 60 * 24 * 1000 * 30,
-      path: "/"    
+      path: "/",
+      secure: true, // Solo se establecerá en conexiones HTTPS
+      sameSite: "none", // Configuración de SameSite en None
+      maxAge: 1000 * 60 * 60 * 24,
+      domain: "kanban-api-lovat.vercel.app", //   
     })
     res.send({token,userDb})
   } catch (error) {
@@ -42,7 +46,11 @@ export const register = async (req, res) => {
     res.cookie("token",serialized,{
       httpOnly: true,
       maxAge: 60 * 60 * 24 * 1000 * 30,
-      path: "/"
+      path: "/",
+      secure: true, // Solo se establecerá en conexiones HTTPS
+      sameSite: "none", // Configuración de SameSite en None
+      maxAge: 1000 * 60 * 60 * 24,
+      domain: "kanban-api-lovat.vercel.app", // Dominio del servidor sin http o https
     })
     res.send({token,userDb})
   } catch (error) {
