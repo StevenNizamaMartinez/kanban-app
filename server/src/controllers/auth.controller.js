@@ -20,7 +20,7 @@ export const login = async (req, res) => {
       httpOnly: true,
       maxAge: 60 * 60 * 24 * 1000 * 30,
       path: "/",
-      secure: true, // Solo se establecerá en conexiones HTTPS
+      // secure: true, // Solo se establecerá en conexiones HTTPS
       sameSite: "none", // Configuración de SameSite en None
       maxAge: 1000 * 60 * 60 * 24,
       domain: "kanban-api-lovat.vercel.app", //   
@@ -47,7 +47,7 @@ export const register = async (req, res) => {
       httpOnly: true,
       maxAge: 60 * 60 * 24 * 1000 * 30,
       path: "/",
-      secure: true, // Solo se establecerá en conexiones HTTPS
+      // secure: true, // Solo se establecerá en conexiones HTTPS
       sameSite: "none", // Configuración de SameSite en None
       maxAge: 1000 * 60 * 60 * 24,
       domain: "kanban-api-lovat.vercel.app", // Dominio del servidor sin http o https
