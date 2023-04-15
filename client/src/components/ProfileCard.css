@@ -1,0 +1,25 @@
+/* PROFILE */
+
+.profile--card-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.profile--card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--X);
+  border-radius: var(--X);
+  width: 100%;
+  max-width: 275px;
+  padding: var(--L);
+}
+
+.profile--card h3 {
+  border-bottom: 1px solid #535bf2;
+}
+
+
+.profile--card img {
+  width: 100%;
+}

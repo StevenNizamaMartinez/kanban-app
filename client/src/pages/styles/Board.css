@@ -1,0 +1,31 @@
+.board-container{
+  display: flex;
+  flex-direction: column;
+  gap: var(--S);
+  padding: var(--X) var(--S) 0 var(--S);
+  height: 100%;
+  overflow: hidden;
+}
+
+.board-icons{
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--X);
+} 
+
+.board-content{
+  padding: 0 var(--L) ;
+}
+
+.board-line{
+  margin: 0 var(--L) ;
+}
+
+.favorite{
+  color: var(--star);
+}
+
+.star:hover{
+  transform: scale(1.1);
+  transition: 0.2s;
+}

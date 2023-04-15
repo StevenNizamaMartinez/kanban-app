@@ -1,0 +1,47 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Agrega un z-index alto */
+}
+
+.modal{
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  background-color: var(--background);
+  padding: 2rem;
+  color: var(--text);
+}
+
+.modal-title{
+  margin-bottom: var(--L);
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  /* background-color: #ccc; */
+  border: none;
+  cursor: pointer;
+}
+.ql-container .ql-editor{
+  color: var(--text);
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 90%;
+  }
+  .modal-overlay {
+    z-index: 20; /* Agrega un z-index alto */
+  }
+}

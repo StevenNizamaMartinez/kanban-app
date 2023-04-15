@@ -1,0 +1,61 @@
+.board-header{
+  margin-bottom: var(--X);
+}
+
+.board-icon{
+  font-size: var(--L);
+  display: inline-block;
+}
+
+.board-input {
+  border: none;
+  outline: none;
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.board-title-container{
+  display: flex;
+  align-items: center;
+  gap: var(--S);
+}
+
+.board-title, .board-input-title{
+  font-size: var(--L);
+  font-weight: 600;
+
+}
+
+.board-description, .board-input-description {
+  margin-top: var(--X);
+  font-size: var(--X);
+}
+
+.board-button{
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--M);
+}
+
+.board-button button{
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.board-button button:hover{
+  color: var(--secondary);
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.board-title-container .board-title{
+  min-width: 150px;
+}

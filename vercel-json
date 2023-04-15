@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "client",
+      "use": "@vercel/node",
+      "config": {
+        "buildCommand": "cd client && npm install && npm run build",
+        "outputDirectory": "client/dist"
+      }
+    },
+    {
+      "src": "server",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "client/dist/$1"
+    }
+  ]
+}

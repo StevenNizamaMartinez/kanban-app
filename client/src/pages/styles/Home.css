@@ -1,0 +1,11 @@
+.home-container .container--grid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+img{
+  /* width: 60px; */
+  width: 50%;
+}

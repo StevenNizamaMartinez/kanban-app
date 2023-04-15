@@ -1,0 +1,30 @@
+.home-container{
+  display: grid;
+  grid-template-columns: minmax(120px,20%) minmax(auto,80%);
+  justify-content: center;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary)  ;  /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+.ck ck-editor__main h2{
+  color: black
+}
+.ck-content {
+  color: black
+}
+
+.swal2-container  .swal2-popup {
+  background-color: var(--backgroundCover);
+  color: var(--text-light);
+}

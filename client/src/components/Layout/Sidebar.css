@@ -1,0 +1,64 @@
+.sidebar-container{
+  display: flex;
+  flex-direction: column;
+  padding: var(--S);
+  gap: var(--L);
+  background-color: #434343;
+  height: 100vh;
+  position: sticky; /* Establece la posición pegajosa */
+  top: 0;
+  overflow-x: scroll;
+  overflow-x: hidden;
+}
+
+.sidebar-title{
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 100%;
+}
+
+.sidebar-title span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+.sidebar-title-board{
+  font-size: var(--X);
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.sidebar-title-board a{
+  width: 100%;
+  display: flex;
+}
+
+.sidebar-section-title{
+  font-size: var(--X);
+  margin-bottom: var(--X);
+  font-weight: 600;
+}
+
+.private-boards, .favorite-boards{
+  display: flex;
+  flex-direction: column;
+  gap: var(--S);
+  padding-left: var(--S);
+}
+
+.sidebar-section-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-section-title .icon{
+  font-size: var(--S);
+}
+
+.title-user{
+  color: var(--primary);
+}

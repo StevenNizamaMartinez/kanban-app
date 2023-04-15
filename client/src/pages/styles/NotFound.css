@@ -1,0 +1,26 @@
+/* NOT FOUND */
+.notfound--container {
+  padding: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 90vw;
+  height: 90vh;
+}
+
+.notfound {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.notfound h2 {
+  font-weight: 900;
+  margin-top: var(--px);
+}
+
+.notfound img {
+  width: 30%;
+  min-width: 200px;
+}
