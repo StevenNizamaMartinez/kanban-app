@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cookieParser())
 app.use(express.urlencoded({ extended: true }));
 
-const allowedOrigins = ['http://localhost:5173',"https://kanban-kl5tcho0v-stevennizamamartinez.vercel.app","https://kanban-app-git-master-stevennizamamartinez.vercel.app"];
+const allowedOrigins = ['http://localhost:5173',"https://kanban-kl5tcho0v-stevennizamamartinez.vercel.app","https://kanban-app-git-master-stevennizamamartinez.vercel.app", "https://kanban-app-psi.vercel.app"];
 
 app.use(cors({
   origin: (origin, callback) => {
