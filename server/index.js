@@ -1,11 +1,11 @@
 import app from "./app.js";
-import { connectDB } from "./database/db.js";
-import { PORT } from "./libs/config.js";
-import { handleAuth } from "./middlewares/auth.middleware.js";
-import authRouter from "./routes/auth.routes.js";
-import boardRouter from "./routes/board.routes.js";
-import cardRouter from "./routes/card.routes.js";
-import listRouter from "./routes/list.routes.js";
+import { PORT } from "./src/libs/config.js";
+import { handleAuth } from "./src/middlewares/auth.middleware.js";
+import { connectDB } from "./src/database/db.js";
+import authRouter from "./src/routes/auth.routes.js";
+import boardRouter from "./src/routes/board.routes.js";
+import cardRouter from "./src/routes/card.routes.js";
+import listRouter from "./src/routes/list.routes.js";
 
 app.set("port", PORT);
 

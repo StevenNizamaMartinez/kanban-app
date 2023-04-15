@@ -2,7 +2,6 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
-import { SECRET } from "./libs/config.js";
 
 const app = express();
 
@@ -10,7 +9,7 @@ app.use(express.json());
 app.use(cookieParser())
 app.use(express.urlencoded({ extended: true }));
 
-const allowedOrigins = ['http://localhost:8080', 'http://localhost:5173', 'http://localhost:4173'];
+const allowedOrigins = ['http://localhost:8080', 'http://localhost:5173', 'http://localhost:4173',"https://kanban-kl5tcho0v-stevennizamamartinez.vercel.app"];
 
 app.use(cors({
   origin: (origin, callback) => {
