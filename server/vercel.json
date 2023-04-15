@@ -6,15 +6,15 @@
       "use": "@vercel/node"
     }
   ],
+  "destinations": [
+    { "url": "https://kanban-app-psi.vercel.app/" },
+    { "url": "http://localhost:5173" }
+  ],
   "routes": [
     {
       "src": "/(.*)",
       "dest": "/",
       "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-      "destinations": [
-        { "url": "https://kanban-app-psi.vercel.app/" },
-        { "url": "http://localhost:5173" }
-      ],
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "*" },
