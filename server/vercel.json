@@ -6,10 +6,6 @@
       "use": "@vercel/node"
     }
   ],
-  "destinations": [
-    { "url": "https://kanban-app-psi.vercel.app/" },
-    { "url": "http://localhost:5173" }
-  ],
   "routes": [
     {
       "src": "/(.*)",
