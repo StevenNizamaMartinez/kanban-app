@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cookieParser())
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: "https://kanban-api-lovat.vercel.app",
+  origin: "https://kanban-app-psi.vercel.app/",
   credentials: true,
 }));
 app.get("/", (req, res) => {
