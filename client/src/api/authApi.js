@@ -5,6 +5,7 @@ export const loginRequest = async (credentials) => {
     const data = await api.post("/auth/login", credentials);
     return data.data;
   } catch (error) {
+    console.log(error);
     throw error;
   }
 };
@@ -14,6 +15,7 @@ export const registerRequest = async (credentials) => {
     const data = await api.post("/auth/register", credentials);
     return data.data;
   } catch (error) {
+    console.log(error);
     throw error;
   }
 }
