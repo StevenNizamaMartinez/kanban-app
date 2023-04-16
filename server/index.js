@@ -24,7 +24,7 @@ app.get("/lists",async (req,res)=>{
       res.json(list);
     }
     catch (error) {
-      res.status(500).json({ message: error });
+      res.status(500).json({ error });
     }
   }
 )
