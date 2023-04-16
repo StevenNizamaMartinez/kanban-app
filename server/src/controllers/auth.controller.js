@@ -7,9 +7,9 @@ const cookieConfig = {
   httpOnly: true,
   maxAge: 60 * 60 * 24 * 1000 * 30,
   path: "/",
-  // secure: true, // Solo se establecerá en conexiones HTTPS
-  // sameSite: "none", // Configuración de SameSite en None
-  // domain: "kanban-app-q1os.vercel.app", // Dominio del servidor sin http o https
+  secure: true, // Solo se establecerá en conexiones HTTPS
+  sameSite: "none", // Configuración de SameSite en None
+  domain: "kanban-app-q1os.vercel.app", // Dominio del servidor sin http o https
 }
 
 export const login = async (req, res) => {
@@ -19,8 +19,7 @@ export const login = async (req, res) => {
     const userDb = await userModel.findOne({ email });
     if (!userDb) return res.status(404).json({ message: "User not found" });
     const compare = await userModel.verifyPassword(password, userDb.password)
-    if (!compare)
-      return res.status(400).json({ message: "Incorrect password" });
+    if (!compare) return res.status(400).json({ message: "Incorrect password" });
     const token = jsonwebtoken.sign({userDb}, SECRET, {
       expiresIn: 60 * 60 * 24, // 24 hours
     });
