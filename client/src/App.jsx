@@ -17,14 +17,14 @@ function App() {
   const navigate  = useNavigate()
   useEffect(()=>{
     const token = localStorage.getItem("token")
-    if (!token) return navigate("/login")
+    if (!token) return navigate("/")
     const decodeToken = decode(token)
     setUser(decodeToken.userDb)
     const tokenExpire = decodeToken.exp * 1000
     const currentTime = new Date().getTime()
     if(decodeToken.exp * 1000 < new Date().getTime()){
       localStorage.removeItem("token")
-      navigate("/login")
+      navigate("/")
     }
     navigate("/home")
   },[])
@@ -33,7 +33,7 @@ function App() {
     <>
       <Toaster />
       <Routes>
-        <Route path='/login' element={<Login />} />
+        <Route path='/' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/home' element={<Home />}>
           <Route path='/home/:id' element={<Board />} />
