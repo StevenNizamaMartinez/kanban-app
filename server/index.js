@@ -17,6 +17,18 @@ app.get("/", (req, res) => {
     name: "API REST KANBAN",
   });
 });
+
+app.get("/lists",async (req,res)=>{
+    try {
+      const list = await listModel.find();
+      res.json(list);
+    }
+    catch (error) {
+      res.status(500).json({ message: error });
+    }
+  }
+)
+
 app.use("/api/v1/auth", authRouter);
 app.use(handleAuth);
 app.use("/api/v1/board", boardRouter);

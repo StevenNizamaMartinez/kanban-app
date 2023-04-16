@@ -12,6 +12,7 @@ export const getLists = async (req, res) => {
   }
 }
 
+
 export const createList = async (req, res) => {
   const { id } = res.locals.data;
   const data = req.body;
