@@ -42,7 +42,7 @@ export const AuthProvider = ({children}) => {
       toast.success("Logout success")
       console.log(data);
       localStorage.removeItem("token")
-      navigate('/login')
+      navigate('/')
     }
   })
 

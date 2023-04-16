@@ -3,6 +3,15 @@ import userModel from "../models/user.model.js";
 import jsonwebtoken from "jsonwebtoken";
 import cookie from "cookie";
 
+const cookieConfig = {
+  httpOnly: true,
+  maxAge: 60 * 60 * 24 * 1000 * 30,
+  path: "/",
+  // secure: true, // Solo se establecerá en conexiones HTTPS
+  // sameSite: "none", // Configuración de SameSite en None
+  // domain: "kanban-app-q1os.vercel.app", // Dominio del servidor sin http o https
+}
+
 export const login = async (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) return res.status(400).json({ message: "All fields are required" });
@@ -16,15 +25,7 @@ export const login = async (req, res) => {
       expiresIn: 60 * 60 * 24, // 24 hours
     });
     const serialized = cookie.serialize("token", token);
-    res.cookie("token",serialized,{
-      httpOnly: true,
-      maxAge: 60 * 60 * 24 * 1000 * 30,
-      path: "/",
-      secure: true, // Solo se establecerá en conexiones HTTPS
-      sameSite: "none", // Configuración de SameSite en None
-      maxAge: 1000 * 60 * 60 * 24,
-      domain: "kanban-app-q1os.vercel.app", // Dominio del servidor sin http o https
-    })
+    res.cookie("token",serialized,cookieConfig)
     res.send({token,userDb})
   } catch (error) {
     res.status(500).json({ message: error });
@@ -43,15 +44,7 @@ export const register = async (req, res) => {
       expiresIn: 60 * 60 * 24, // 24 hours
     });
     const serialized = cookie.serialize("token", token);
-    res.cookie("token",serialized,{
-      httpOnly: true,
-      maxAge: 60 * 60 * 24 * 1000 * 30,
-      path: "/",
-      secure: true, // Solo se establecerá en conexiones HTTPS
-      sameSite: "none", // Configuración de SameSite en None
-      maxAge: 1000 * 60 * 60 * 24,
-      domain: "kanban-app-q1os.vercel.app", // Dominio del servidor sin http o https
-    })
+    res.cookie("token",serialized,cookieConfig)
     res.send({token,userDb})
   } catch (error) {
     res.status(500).json({ message: error });
