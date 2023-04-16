@@ -20,10 +20,10 @@ export const login = async (req, res) => {
       httpOnly: true,
       maxAge: 60 * 60 * 24 * 1000 * 30,
       path: "/",
-      // secure: true, // Solo se establecerá en conexiones HTTPS
+      secure: true, // Solo se establecerá en conexiones HTTPS
       sameSite: "none", // Configuración de SameSite en None
       maxAge: 1000 * 60 * 60 * 24,
-      domain: "kanban-api-5pni.onrender.com", // Dominio del servidor sin http o https
+      domain: "kanban-app-q1os.vercel.app", // Dominio del servidor sin http o https
     })
     res.send({token,userDb})
   } catch (error) {
@@ -47,10 +47,10 @@ export const register = async (req, res) => {
       httpOnly: true,
       maxAge: 60 * 60 * 24 * 1000 * 30,
       path: "/",
-      // secure: true, // Solo se establecerá en conexiones HTTPS
+      secure: true, // Solo se establecerá en conexiones HTTPS
       sameSite: "none", // Configuración de SameSite en None
       maxAge: 1000 * 60 * 60 * 24,
-      domain: "kanban-api-5pni.onrender.com", // Dominio del servidor sin http o https
+      domain: "kanban-app-q1os.vercel.app", // Dominio del servidor sin http o https
     })
     res.send({token,userDb})
   } catch (error) {
