@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   });
 });
 app.use("/api/v1/auth", authRouter);
-// app.use(handleAuth);
+app.use(handleAuth);
 app.use("/api/v1/board", boardRouter);
 app.use("/api/v1/list", listRouter);
 app.use("/api/v1/card", cardRouter);
