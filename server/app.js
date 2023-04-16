@@ -11,12 +11,5 @@ app.use(cors({
   origin: "http://localhost:5173",
   credentials: true,
 }));
-app.get("/", (req, res) => {
-  res.json({
-    version: "1.0.1",
-    author: "Steven Nizama",
-    name: "API REST KANBAN",
-  });
-});
 
 export default app;

@@ -10,6 +10,13 @@ import listRouter from "./src/routes/list.routes.js";
 app.set("port", PORT);
 
 // ROUTES
+app.get("/", (req, res) => {
+  res.json({
+    version: "1.0.1",
+    author: "Steven Nizama",
+    name: "API REST KANBAN",
+  });
+});
 app.use("/api/v1/auth", authRouter);
 app.use(handleAuth);
 app.use("/api/v1/board", boardRouter);
