@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://kanban-api-5pni.onrender.com/api/v1',
+  baseURL: 'https://kanban-app-q1os.vercel.app/api/v1',
   withCredentials: true
 })
 
