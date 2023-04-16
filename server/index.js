@@ -6,6 +6,7 @@ import authRouter from "./src/routes/auth.routes.js";
 import boardRouter from "./src/routes/board.routes.js";
 import cardRouter from "./src/routes/card.routes.js";
 import listRouter from "./src/routes/list.routes.js";
+import listModel from "./src/models/list.model.js";
 
 app.set("port", PORT);
 
