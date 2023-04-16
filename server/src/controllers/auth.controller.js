@@ -9,7 +9,7 @@ const cookieConfig = {
   path: "/",
   secure: true, // Solo se establecerá en conexiones HTTPS
   sameSite: "none", // Configuración de SameSite en None
-  domain: "kanban-app-q1os.vercel.app", // Dominio del servidor sin http o https
+  domain: "kanban-app-q1os.vercel.app", // Dominio del servidor sin http o http
 }
 
 export const login = async (req, res) => {
