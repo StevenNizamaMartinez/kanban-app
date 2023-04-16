@@ -9,7 +9,7 @@ const cookieConfig = {
   path: "/",
   secure: true, // Solo se establecerá en conexiones HTTPS
   sameSite: "none", // Configuración de SameSite en None
-  domain: "kanban-app-q1os.vercel.app", // Dominio del servidor sin http o http
+  domain: "kanban-api-5pni.onrender.com", // Dominio del servidor sin http o http
 };
 
 const tokenConfig = {
