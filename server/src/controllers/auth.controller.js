@@ -21,7 +21,7 @@ export const login = async (req, res) => {
     const compare = await userModel.verifyPassword(password, userDb.password)
     if (!compare) return res.status(400).json({ message: "Incorrect password" });
     const token = jsonwebtoken.sign({userDb}, SECRET, {
-      expiresIn: 60 * 60 * 24, // 24 hours
+      expiresIn: 60 * 60 * 24, 
     });
     const serialized = cookie.serialize("token", token);
     res.cookie("token",serialized,cookieConfig)
