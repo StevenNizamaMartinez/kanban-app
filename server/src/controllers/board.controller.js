@@ -36,7 +36,7 @@ export const updateBoard = async (req, res) => {
   const { id } = req.params;
   const updateFields = req.body;
   console.log(updateFields);
-  if (!updateFields.title) {
+  if (!updateFields.title && !updateFields.icon) {
     updateFields.title = "Untitled Board";
   }
   try {
