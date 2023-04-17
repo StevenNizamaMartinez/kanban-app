@@ -5,9 +5,11 @@ import { corsOptions } from "./src/libs/config.js";
 
 const app = express();
 
+//Cors
+app.use(cors(corsOptions));
+
 app.use(express.json());
 app.use(cookieParser())
 app.use(express.urlencoded({ extended: true }));
-app.use(cors(corsOptions));
 
 export default app;
