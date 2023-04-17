@@ -6,7 +6,7 @@ export const PORT = process.env.PORT
 export const MONGO_URI = process.env.MONGO_URI
 export const SECRET = process.env.SECRET
 
-const allowedOrigins = ['http://localhost:5173', "https://kanban-app-psi.vercel.app/"];
+const allowedOrigins = ['http://localhost:5173', "https://kanban-app-psi.vercel.app"];
 export const corsOptions = {
   origin: function (origin, callback) {
     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
