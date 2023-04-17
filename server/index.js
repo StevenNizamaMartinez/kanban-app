@@ -10,6 +10,7 @@ import listModel from "./src/models/list.model.js";
 
 app.set("port", PORT);
 
+
 // ROUTES
 app.get("/", (req, res) => {
   res.json({

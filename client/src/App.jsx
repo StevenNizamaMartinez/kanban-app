@@ -10,12 +10,18 @@ import PageNotFound from "./pages/NotFound"
 import decode from "jwt-decode"
 import { useEffect } from "react"
 import { useAuth } from "./context/AuthContext"
+import axios from "axios"
 
 
 function App() {
   const {setUser} = useAuth()
   const navigate  = useNavigate()
   useEffect(()=>{
+
+    axios.get("https://kanban-api-5pni.onrender.com/").
+    then(res => console.log(res.data))
+    .catch(err => console.log(err))
+
     const token = localStorage.getItem("token")
     if (!token) return navigate("/")
     const decodeToken = decode(token)
