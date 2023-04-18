@@ -1,13 +1,15 @@
 import { useForm } from "react-hook-form"
 import { useAuth } from "../../context/AuthContext"
 import "./Form.css"
+import ButtonForm from "../ButtonForm"
 
 function FormLogin() {
 
   const { register, handleSubmit, formState: { errors } } = useForm()
-  const { loginMutation } = useAuth()
+  const { loginMutation, loadingAuth, setLoadingAuth } = useAuth()
 
   const onSubmit = (data) => {
+    setLoadingAuth(true)
     loginMutation.mutate(data)
   }
 
@@ -23,7 +25,7 @@ function FormLogin() {
         <input type="password" id="password" {...register("password", { required: true })} />
         {errors.password && <span className="form--error">Password is required</span>}
       </div>
-      <button>Login</button>
+      <ButtonForm loader={loadingAuth} text={"Sign Up"} textLoading={"Loading"} />
     </form>
   )
 }

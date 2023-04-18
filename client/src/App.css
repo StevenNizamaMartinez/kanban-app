@@ -28,3 +28,26 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--backgroundCover);
   color: var(--text-light);
 }
+
+
+.redirect{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.redirect a{
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.redirect a:hover{
+  text-decoration: underline;
+}
+
+.advertency{
+  text-align: center;
+  margin-top: var(--X);
+  color: var(--text-light);
+}
